@@ -39,6 +39,7 @@ body {
   border: none;
   border-radius: 14px;
   outline: none;
+  font-size: 16px;
 }
 
 button {
@@ -49,9 +50,11 @@ button {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 button:hover {
+  transform: translateY(-2px);
   background: #9b6cff;
 }
 
@@ -92,8 +95,22 @@ nav {
   margin-bottom: 25px;
 }
 
+.timer-labels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 12px;
+  opacity: 0.8;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 #timer {
-  font-size: 72px;
+  font-size: 68px;
+  font-weight: bold;
+  letter-spacing: 3px;
   margin: 20px 0;
 }
 
