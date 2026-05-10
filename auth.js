@@ -1,10 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyACxwc0jBDxsnY3fhwlGmLN8ShECDpA14",
@@ -26,6 +26,8 @@ window.signup = async function () {
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
+  authMessage.textContent = "";
+
   if (!email || !password) {
     authMessage.textContent = "Please enter an email and password.";
     return;
@@ -35,10 +37,14 @@ window.signup = async function () {
     await createUserWithEmailAndPassword(auth, email, password);
     window.location.href = "app.html";
   } catch (error) {
+    console.error(error);
+
     if (error.code === "auth/email-already-in-use") {
       authMessage.textContent = "This email already has an account. Please log in instead.";
     } else if (error.code === "auth/weak-password") {
       authMessage.textContent = "Password must be at least 6 characters.";
+    } else if (error.code === "auth/api-key-not-valid.-please-pass-a-valid-api-key.") {
+      authMessage.textContent = "Firebase API key issue. Check your Firebase config.";
     } else {
       authMessage.textContent = error.message;
     }
@@ -49,6 +55,8 @@ window.login = async function () {
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
+  authMessage.textContent = "";
+
   if (!email || !password) {
     authMessage.textContent = "Please enter your email and password.";
     return;
@@ -58,12 +66,13 @@ window.login = async function () {
     await signInWithEmailAndPassword(auth, email, password);
     window.location.href = "app.html";
   } catch (error) {
+    console.error(error);
     authMessage.textContent = "Login failed. Check your email or password.";
   }
 };
 
 onAuthStateChanged(auth, (user) => {
-  if (user) {
+  if (user && window.location.pathname.includes("index.html")) {
     window.location.href = "app.html";
   }
 });
