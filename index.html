@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StudyTrack</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-card">
+    <h1>StudyTrack</h1>
+    <p>Track your study time and save every session.</p>
+
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="signup()">Get Started</button>
+    <button onclick="login()" class="secondary-btn">Log In</button>
+
+    <p id="authMessage"></p>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
