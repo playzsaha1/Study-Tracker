@@ -7,12 +7,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_AUTH_DOMAIN",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_STORAGE_BUCKET",
-  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+  apiKey: "AIzaSyACxwc0jBDxsnY3fhwlGmLN8ShECDpA14",
+  authDomain: "studytrack-ddf21.firebaseapp.com",
+  projectId: "studytrack-ddf21",
+  storageBucket: "studytrack-ddf21.firebasestorage.app",
+  messagingSenderId: "1066736405928",
+  appId: "1:1066736405928:web:1e6dcd8cf958fd8e2ca19d"
 };
 
 const app = initializeApp(firebaseConfig);
