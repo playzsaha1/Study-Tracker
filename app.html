@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StudyTrack Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <h2>StudyTrack</h2>
+    <button onclick="logout()">Log Out</button>
+  </nav>
+
+  <main class="dashboard">
+
+    <section class="timer-card">
+      <h1 id="timer">00:00:00</h1>
+
+      <input id="subject" placeholder="What are you studying? e.g. Finance">
+
+      <div class="buttons">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="stopAndSave()">Stop & Save</button>
+        <button onclick="resetTimer()" class="danger-btn">Reset</button>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Study Time</h3>
+        <p id="totalTime">0h 0m</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Today</h3>
+        <p id="todayTime">0h 0m</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Sessions</h3>
+        <p id="sessionCount">0</p>
+      </div>
+    </section>
+
+    <section class="history-card">
+      <h2>Saved Study Sessions</h2>
+      <div id="sessionList"></div>
+    </section>
+
+  </main>
+
+  <script type="module" src="timer.js"></script>
+</body>
+</html>

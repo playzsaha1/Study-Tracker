@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #101014;
+  color: white;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #191919, #5b21b6, #111827);
+}
+
+.auth-card {
+  width: 360px;
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.auth-card h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.auth-card input,
+.timer-card input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 14px;
+  background: #7c3cff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #9b6cff;
+}
+
+.secondary-btn {
+  background: #252532;
+  margin-top: 10px;
+}
+
+.danger-btn {
+  background: #dc2626;
+}
+
+#authMessage {
+  margin-top: 15px;
+  color: #ffd6d6;
+}
+
+nav {
+  height: 70px;
+  padding: 0 30px;
+  background: #17171d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.timer-card {
+  background: linear-gradient(135deg, #1d1d27, #31126b);
+  border-radius: 26px;
+  padding: 35px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#timer {
+  font-size: 72px;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.stat-card,
+.history-card {
+  background: #181820;
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.stat-card p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.history-card {
+  margin-top: 25px;
+}
+
+.session-item {
+  padding: 15px;
+  background: #242432;
+  border-radius: 14px;
+  margin: 10px 0;
+}
