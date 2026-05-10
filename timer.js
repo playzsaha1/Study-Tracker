@@ -17,14 +17,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyACxwc0jBDxsnY3fhwlGmLN8ShECDpA14",
+  apiKey: "AIzaSyACxwc0jBDxsnY3fhwlGmLN8ShECDpA1l4",
   authDomain: "studytrack-ddf21.firebaseapp.com",
   projectId: "studytrack-ddf21",
   storageBucket: "studytrack-ddf21.firebasestorage.app",
   messagingSenderId: "1066736405928",
   appId: "1:1066736405928:web:1e6dcd8cf958fd8e2ca19d"
 };
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);

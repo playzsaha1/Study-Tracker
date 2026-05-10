@@ -7,7 +7,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyACxwc0jBDxsnY3fhwlGmLN8ShECDpA14",
+  apiKey: "AIzaSyACxwc0jBDxsnY3fhwlGmLN8ShECDpA1l4",
   authDomain: "studytrack-ddf21.firebaseapp.com",
   projectId: "studytrack-ddf21",
   storageBucket: "studytrack-ddf21.firebasestorage.app",
